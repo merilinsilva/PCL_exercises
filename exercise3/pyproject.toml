@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "my_project"
+version = "0.0.1"
+authors = [
+    { name="Mérilin Sousa Silva", email="merilin.sousasilva@uzh.ch" }
+]
+description = "A project uses the Flesch-Kincaid and Gunning Fog indices to test the readability of a text"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.9"
+dependencies = [
+"spacy>= 3.7.0",
+"pyphen==0.14.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/readability_analysis"]

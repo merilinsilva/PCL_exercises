@@ -1,0 +1,4 @@
+I encountered the issue of when refactoring the scripts that the src module wasn't being found when running pytest.
+Even with addition of the two dots "..src.levenstein.py" it didn't work.
+Thus, I created a .env file that sets the python path variable to the pwd.
+Please run "set -a" and "source .env" on the command line before running pytest!
